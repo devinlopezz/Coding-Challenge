@@ -1,9 +1,9 @@
 #Step 5
 
 import random
-import hangman_art
-import hangman_words
-from replit import clear
+import hangman_art as hangman_art
+import hangman_words as hangman_words
+import os
 
 #Update the word list to use the 'word_list' from hangman_words.py
 chosen_word = random.choice(hangman_words.word_list)
@@ -30,7 +30,7 @@ print(hangman_art.stages[6])
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
 
-    clear()
+    os.system('clear')
     
     #If the user has entered a letter they've already guessed, print the letter and let them know.
     if guess in display:
